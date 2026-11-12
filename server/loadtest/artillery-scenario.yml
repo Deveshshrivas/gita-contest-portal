@@ -1,0 +1,52 @@
+config:
+  target: 'http://localhost:5000/api/v1'
+  phases:
+    - duration: 60
+      arrivalRate: 50
+      name: 'Warm up phase'
+    - duration: 180
+      arrivalRate: 200
+      rampTo: 1000
+      name: 'High concurrency exam spike'
+  defaults:
+    headers:
+      Content-Type: 'application/json'
+
+scenarios:
+  - name: 'Candidate Login, Exam Session & Autosave'
+    flow:
+      - get:
+          url: '/exams'
+      - post:
+          url: '/auth/login'
+          json:
+            email: 'arjun.sharma@example.com'
+            password: 'GitaExam@2026'
+          capture:
+            - json: '$.data.accessToken'
+              as: 'jwtToken'
+      - post:
+          url: '/attempts/start'
+          headers:
+            Authorization: 'Bearer {{ jwtToken }}'
+          json:
+            examId: 'glc-2026'
+            stageNumber: 1
+          capture:
+            - json: '$.data.attempt.attemptId'
+              as: 'attemptId'
+      - loop:
+          - post:
+              url: '/attempts/{{ attemptId }}/save'
+              headers:
+                Authorization: 'Bearer {{ jwtToken }}'
+              json:
+                questionId: 'q-1'
+                selectedOption: 'B'
+                isReview: false
+          - think: 5
+        count: 3
+      - post:
+          url: '/attempts/{{ attemptId }}/submit'
+          headers:
+            Authorization: 'Bearer {{ jwtToken }}'

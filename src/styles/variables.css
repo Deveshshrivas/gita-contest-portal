@@ -1,0 +1,20 @@
+:root {
+  --color-vedic-dark: #032e29;
+  --color-vedic-primary: #044e45;
+  --color-vedic-teal: #08695d;
+  --color-vedic-accent: #0b8677;
+  --color-vedic-light: #e6f4f2;
+  --color-vedic-gold: #f59e0b;
+  --color-vedic-gold-dark: #d97706;
+  --color-vedic-saffron: #ff7700;
+  --color-vedic-cream: #faf8f5;
+  --color-vedic-cream-dark: #f3ece2;
+  --color-vedic-maroon: #881337;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Merriweather', Georgia, serif;
+  --font-shloka: 'Noto Serif Devanagari', 'Merriweather', serif;
+
+  --shadow-card: 0 4px 20px -2px rgba(4, 78, 69, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 14px 28px -6px rgba(4, 78, 69, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

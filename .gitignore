@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.mongodb_data/
+.env
+**/.env
+!.env.example
+!server/.env.example
+*.log
+.DS_Store
+.idea/
+.vscode/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,23 @@
+import { sendError } from '../utils/response.js';
+
+export function validate(schema, source = 'body') {
+  return (req, res, next) => {
+    try {
+      const dataToValidate = source === 'query' ? req.query : source === 'params' ? req.params : req.body;
+      const parsed = schema.parse(dataToValidate);
+      if (source === 'body') req.body = parsed;
+      else if (source === 'query') req.query = parsed;
+      else if (source === 'params') req.params = parsed;
+      next();
+    } catch (err) {
+      if (err.errors) {
+        const details = err.errors.map((e) => ({
+          field: e.path.join('.'),
+          message: e.message,
+        }));
+        return sendError(res, 'Validation failed', 400, 'VALIDATION_ERROR', details);
+      }
+      return sendError(res, err.message, 400, 'VALIDATION_ERROR');
+    }
+  };
+}

@@ -1,0 +1,61 @@
+import { ROLES } from '../constants/roles';
+
+export const ADMIN_NAV_CONFIG = {
+  [ROLES.SUPER_ADMIN]: [
+    { label: 'Platform Overview', path: '/admin', icon: 'LayoutDashboard' },
+    { label: 'Exams & Multi-Stages', path: '/admin/contests', icon: 'Calendar' },
+    { label: 'Question Bank', path: '/admin/questions', icon: 'HelpCircle' },
+    { label: 'Candidates & Stages', path: '/admin/candidates', icon: 'Users' },
+    { label: 'Results & Certificates', path: '/admin/results', icon: 'Award' },
+    { label: 'Books & Inventory', path: '/admin/books', icon: 'BookOpen' },
+    { label: 'Book Distribution', path: '/admin/distribution', icon: 'Truck' },
+    { label: 'Donations & 80G', path: '/admin/donations', icon: 'HeartHandshake' },
+    { label: 'Financial Ledger', path: '/admin/finances', icon: 'CreditCard' },
+    { label: 'Staff & Roles', path: '/admin/users', icon: 'UserCheck' },
+    { label: 'Audit & Analytics', path: '/admin/reports', icon: 'BarChart3' },
+    { label: 'System Settings', path: '/admin/settings', icon: 'Settings' },
+  ],
+  [ROLES.ADMIN]: [
+    { label: 'Admin Dashboard', path: '/admin', icon: 'LayoutDashboard' },
+    { label: 'Exams & Schedules', path: '/admin/contests', icon: 'Calendar' },
+    { label: 'Candidates List', path: '/admin/candidates', icon: 'Users' },
+    { label: 'Results & Merits', path: '/admin/results', icon: 'Award' },
+    { label: 'Books & Stock', path: '/admin/books', icon: 'BookOpen' },
+    { label: 'Dispatch Tracking', path: '/admin/distribution', icon: 'Truck' },
+    { label: 'Staff Directory', path: '/admin/users', icon: 'UserCheck' },
+    { label: 'Activity Reports', path: '/admin/reports', icon: 'BarChart3' },
+  ],
+  [ROLES.EXAM_CONTROLLER]: [
+    { label: 'Controller Desk', path: '/admin', icon: 'LayoutDashboard' },
+    { label: 'Exams & Stage Builder', path: '/admin/contests', icon: 'Calendar' },
+    { label: 'Question Bank & Verses', path: '/admin/questions', icon: 'HelpCircle' },
+    { label: 'Exam Sessions & Roll', path: '/admin/candidates', icon: 'Users' },
+    { label: 'Evaluation & Results', path: '/admin/results', icon: 'Award' },
+  ],
+  [ROLES.MANAGER]: [
+    { label: 'Center Operations', path: '/admin', icon: 'LayoutDashboard' },
+    { label: 'Center Candidates', path: '/admin/candidates', icon: 'Users' },
+    { label: 'Book Inventory Guard', path: '/admin/books', icon: 'BookOpen' },
+    { label: 'Dispatch & Logistics', path: '/admin/distribution', icon: 'Truck' },
+    { label: 'Center Stock Report', path: '/admin/reports', icon: 'BarChart3' },
+  ],
+  [ROLES.EXAM_COORDINATOR]: [
+    { label: 'Coordinator Desk', path: '/admin', icon: 'LayoutDashboard' },
+    { label: 'Student Admissions', path: '/admin/candidates', icon: 'Users' },
+    { label: 'Stage Progressions', path: '/admin/contests', icon: 'Calendar' },
+    { label: 'Result Certifications', path: '/admin/results', icon: 'Award' },
+  ],
+  [ROLES.FINANCE_MANAGER]: [
+    { label: 'Finance Dashboard', path: '/admin', icon: 'LayoutDashboard' },
+    { label: 'Exam Fees & Payments', path: '/admin/finances', icon: 'CreditCard' },
+    { label: 'Donations & 80G Receipts', path: '/admin/donations', icon: 'HeartHandshake' },
+    { label: 'Financial Audit Report', path: '/admin/reports', icon: 'BarChart3' },
+  ],
+  [ROLES.CONTENT_MANAGER]: [
+    { label: 'Content Dashboard', path: '/admin', icon: 'LayoutDashboard' },
+    { label: 'Books & Catalog', path: '/admin/books', icon: 'BookOpen' },
+    { label: 'Syllabus (18 Chapters)', path: '/admin/syllabus', icon: 'BookMarked' },
+    { label: 'Study Resources (PDFs)', path: '/admin/materials', icon: 'FileText' },
+    { label: 'Question Bank', path: '/admin/questions', icon: 'HelpCircle' },
+  ],
+};
