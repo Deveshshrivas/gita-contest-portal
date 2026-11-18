@@ -116,83 +116,78 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Top Organizers Ribbon Banner with Authentic Official Logos */}
-          <div className="bg-white/95 backdrop-blur-md rounded-2xl border border-amber-300/80 p-3 sm:p-4 mb-8 shadow-sm flex flex-col xl:flex-row items-center justify-between gap-4">
-            <div className="flex items-center flex-wrap justify-center xl:justify-start gap-4 sm:gap-6 text-xs font-bold text-slate-800">
+          <div className="bg-white/95 backdrop-blur-md rounded-2xl border border-amber-300/80 p-2.5 sm:p-4 mb-6 sm:mb-8 shadow-sm flex flex-col xl:flex-row items-center justify-between gap-3 sm:gap-4">
+            {/* 4 Organizers: 2x2 grid on mobile (<sm), 4-col row on sm, flex on xl */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 xl:flex xl:items-center gap-2 sm:gap-4 xl:gap-6 w-full xl:w-auto text-xs font-bold text-slate-800">
               
               {/* 1. Avantkulam */}
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2 sm:gap-2.5 p-2 sm:p-0 bg-slate-50/90 sm:bg-transparent rounded-xl sm:rounded-none border border-slate-200/80 sm:border-0">
                 <img
                   src="/images/logo-avantkulam-clean.png"
                   alt="Avantkulam Logo"
-                  className="w-10 h-10 object-contain rounded-full border border-slate-200 shadow-2xs"
+                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain rounded-full border border-slate-200 shadow-2xs shrink-0"
                 />
-                <div>
-                  <span className="text-[10px] text-emerald-800 uppercase block tracking-wider font-extrabold">अवंतिकुलम</span>
-                  <span className="text-xs text-slate-900 font-bold">Avantkulam</span>
+                <div className="min-w-0">
+                  <span className="text-[9px] sm:text-[10px] text-emerald-800 uppercase block tracking-wider font-extrabold truncate">अवंतिकुलम</span>
+                  <span className="text-[11px] sm:text-xs text-slate-900 font-bold block truncate">Avantkulam</span>
                 </div>
               </div>
 
-              <div className="h-6 w-px bg-slate-200 hidden sm:block" />
-
               {/* 2. Madhya Pradesh Shasan */}
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2 sm:gap-2.5 p-2 sm:p-0 bg-amber-50/70 sm:bg-transparent rounded-xl sm:rounded-none border border-amber-200/80 sm:border-0">
                 <img
                   src="/images/logo-mp-shasan-clean.png"
                   alt="Madhya Pradesh Shasan Official Seal"
-                  className="w-10 h-10 object-contain rounded-full border border-amber-300 shadow-2xs"
+                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain rounded-full border border-amber-300 shadow-2xs shrink-0"
                 />
-                <div>
-                  <span className="text-[10px] text-amber-800 uppercase block tracking-wider font-extrabold">मध्य प्रदेश शासन</span>
-                  <span className="text-xs text-slate-900 font-bold">Govt. of Madhya Pradesh</span>
+                <div className="min-w-0">
+                  <span className="text-[9px] sm:text-[10px] text-amber-800 uppercase block tracking-wider font-extrabold truncate">मध्य प्रदेश शासन</span>
+                  <span className="text-[11px] sm:text-xs text-slate-900 font-bold block truncate">Govt. of MP</span>
                 </div>
               </div>
 
-              <div className="h-6 w-px bg-slate-200 hidden sm:block" />
-
               {/* 3. ISKCON Ujjain */}
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2 sm:gap-2.5 p-2 sm:p-0 bg-slate-50/90 sm:bg-transparent rounded-xl sm:rounded-none border border-slate-200/80 sm:border-0">
                 <img
                   src="/images/logo-iskcon-ujjain-clean.png"
                   alt="ISKCON Ujjain Official Logo"
-                  className="w-10 h-10 object-contain"
+                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain shrink-0"
                 />
-                <div>
-                  <span className="text-[10px] text-slate-800 uppercase block tracking-wider font-extrabold">इस्कॉन उज्जैन</span>
-                  <span className="text-xs text-slate-900 font-bold">ISKCON Ujjain</span>
+                <div className="min-w-0">
+                  <span className="text-[9px] sm:text-[10px] text-slate-800 uppercase block tracking-wider font-extrabold truncate">इस्कॉन उज्जैन</span>
+                  <span className="text-[11px] sm:text-xs text-slate-900 font-bold block truncate">ISKCON Ujjain</span>
                 </div>
               </div>
 
-              <div className="h-6 w-px bg-slate-200 hidden sm:block" />
-
               {/* 4. Veer Bharat Nyas */}
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2 sm:gap-2.5 p-2 sm:p-0 bg-rose-50/70 sm:bg-transparent rounded-xl sm:rounded-none border border-rose-200/80 sm:border-0">
                 <img
                   src="/images/logo-veer-bharat-clean.png"
                   alt="Veer Bharat Nyas Official Logo"
-                  className="h-9 w-auto object-contain"
+                  className="h-7 sm:h-9 w-auto object-contain shrink-0"
                 />
-                <div>
-                  <span className="text-[10px] text-rose-800 uppercase block tracking-wider font-extrabold">वीर भारत न्यास</span>
-                  <span className="text-xs text-slate-900 font-bold">Veer Bharat Nyas</span>
+                <div className="min-w-0">
+                  <span className="text-[9px] sm:text-[10px] text-rose-800 uppercase block tracking-wider font-extrabold truncate">वीर भारत न्यास</span>
+                  <span className="text-[11px] sm:text-xs text-slate-900 font-bold block truncate">Veer Bharat</span>
                 </div>
               </div>
             </div>
 
             {/* Dignitary Special Thanks Badge with Centered CM Portrait */}
-            <div className="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white px-4 py-2.5 rounded-2xl shadow-md border border-amber-400/40 flex items-center gap-3 shrink-0">
+            <div className="w-full xl:w-auto bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl shadow-md border border-amber-400/40 flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3 shrink-0">
               <img
                 src="/images/dr-mohan-yadav-cm.png"
                 alt="Dr. Mohan Yadav, Chief Minister Madhya Pradesh"
-                className="w-12 h-12 rounded-full border-2 border-white object-cover object-center shadow-xs shrink-0 bg-sky-100"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white object-cover object-center shadow-xs shrink-0 bg-sky-100"
               />
               <div className="text-left">
-                <span className="text-[9px] uppercase tracking-wider block text-amber-200 font-bold leading-tight">
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-wider block text-amber-200 font-bold leading-tight">
                   SPECIAL THANKS
                 </span>
                 <strong className="text-xs sm:text-sm block leading-tight text-white font-black tracking-wide">
                   DR. MOHAN YADAV
                 </strong>
-                <span className="text-[10px] text-amber-100 font-medium block leading-tight">
+                <span className="text-[9px] sm:text-[10px] text-amber-100 font-medium block leading-tight">
                   Chief Minister, Madhya Pradesh
                 </span>
               </div>

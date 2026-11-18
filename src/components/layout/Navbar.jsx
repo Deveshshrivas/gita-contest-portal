@@ -117,19 +117,19 @@ export default function Navbar() {
       >
         {/* ── Top Sleek Announcement Bar ── */}
         {!bannerDismissed && (
-          <div className="bg-gradient-to-r from-amber-700 via-amber-600 to-vedic-primary text-white text-[11px] font-medium tracking-wide py-1 px-4 -mt-1.5 mb-1.5 sm:-mt-2.5 sm:mb-2 transition-all">
-            <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
-                <span className="bg-white/20 text-white font-extrabold text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider backdrop-blur-xs shrink-0 flex items-center gap-1">
+          <div className="bg-gradient-to-r from-amber-700 via-amber-600 to-vedic-primary text-white text-[11px] font-medium tracking-wide py-1 px-3 sm:px-4 -mt-1.5 mb-1.5 sm:-mt-2.5 sm:mb-2 transition-all">
+            <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3">
+              <div className="flex items-center gap-1.5 sm:gap-2 overflow-hidden text-ellipsis whitespace-nowrap min-w-0">
+                <span className="hidden sm:inline-flex bg-white/20 text-white font-extrabold text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider backdrop-blur-xs shrink-0 items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-300 animate-ping" />
                   National 2026
                 </span>
-                <span className="truncate">
-                  🕉️ <strong>मध्य प्रदेश शासन एवं ISKCON Ujjain द्वारा आयोजित</strong> • Gita Contest 2026 • 1st Prize ₹1,00,001 • 5L+ Participants
+                <span className="truncate text-[10px] sm:text-[11px]">
+                  🕉️ <strong>मध्य प्रदेश शासन एवं ISKCON Ujjain द्वारा आयोजित</strong> • Gita Contest 2026 • 1st Prize ₹1,00,001
                 </span>
               </div>
 
-              <div className="flex items-center gap-3 shrink-0">
+              <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                 <Link
                   to="/student/lobby/gita-practice-mock"
                   className="hidden md:inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider bg-amber-400 hover:bg-amber-300 text-slate-950 px-2.5 py-0.5 rounded-md shadow-xs transition"
@@ -139,10 +139,10 @@ export default function Navbar() {
                 </Link>
                 <button
                   onClick={handleDismissBanner}
-                  className="p-0.5 hover:bg-white/20 rounded text-amber-100 hover:text-white transition"
+                  className="p-1 hover:bg-white/20 rounded text-amber-100 hover:text-white transition cursor-pointer"
                   aria-label="Dismiss banner"
                 >
-                  <X size={14} />
+                  <X size={13} />
                 </button>
               </div>
             </div>
@@ -150,26 +150,26 @@ export default function Navbar() {
         )}
 
         {/* ── Main Navigation Bar ── */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-2 sm:gap-4">
             {/* ── Brand Logo ── */}
-            <Link to="/" className="flex items-center gap-3 group shrink-0 py-1">
-              <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-vedic-dark via-vedic-primary to-vedic-teal flex items-center justify-center text-white shadow-md shadow-vedic-primary/25 group-hover:scale-105 transition-transform duration-200 border border-emerald-400/30">
-                <span className="text-xl sm:text-2xl font-bold font-shloka leading-none">ॐ</span>
+            <Link to="/" className="flex items-center gap-2 sm:gap-3 group shrink-0 py-1">
+              <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-vedic-dark via-vedic-primary to-vedic-teal flex items-center justify-center text-white shadow-md shadow-vedic-primary/25 group-hover:scale-105 transition-transform duration-200 border border-emerald-400/30 shrink-0">
+                <span className="text-lg sm:text-2xl font-bold font-shloka leading-none">ॐ</span>
                 <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-amber-400 border-2 border-white flex items-center justify-center">
                   <span className="w-1 h-1 rounded-full bg-amber-900" />
                 </span>
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
-                  <span className="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight leading-none group-hover:text-vedic-primary transition-colors">
+                  <span className="font-extrabold text-sm sm:text-lg text-slate-900 tracking-tight leading-none group-hover:text-vedic-primary transition-colors">
                     GITA CONTEST
                   </span>
-                  <span className="text-[10px] font-extrabold bg-amber-100 text-amber-900 border border-amber-300/80 px-1.5 py-0.2 rounded-md">
+                  <span className="text-[9px] sm:text-[10px] font-extrabold bg-amber-100 text-amber-900 border border-amber-300/80 px-1.5 py-0.2 rounded-md">
                     2026
                   </span>
                 </div>
-                <p className="text-[10px] text-slate-500 font-semibold tracking-wider uppercase mt-1">
+                <p className="text-[9px] sm:text-[10px] text-slate-500 font-semibold tracking-wider uppercase mt-0.5">
                   National Leadership Olympiad
                 </p>
               </div>
@@ -565,15 +565,15 @@ export default function Navbar() {
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <Link
                     to="/login"
-                    className="inline-flex items-center gap-1 px-3 py-2 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition cursor-pointer"
+                    className="hidden md:inline-flex items-center gap-1 px-3 py-2 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition cursor-pointer"
                   >
                     <LogIn size={14} />
-                    <span className="hidden sm:inline">Sign In</span>
+                    <span>Sign In</span>
                   </Link>
 
                   <Link
                     to="/register"
-                    className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-extrabold bg-gradient-to-r from-vedic-primary via-vedic-teal to-vedic-accent text-white shadow-md shadow-vedic-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+                    className="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-extrabold bg-gradient-to-r from-vedic-primary via-vedic-teal to-vedic-accent text-white shadow-md shadow-vedic-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
                   >
                     <span>Register Free</span>
                     <ArrowRight size={13} />
@@ -661,6 +661,17 @@ export default function Navbar() {
                     <span className="text-[10px] text-emerald-700">GLC 2026</span>
                   </Link>
                 </div>
+
+                {!user && (
+                  <Link
+                    to="/login"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center justify-center gap-2 p-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 transition"
+                  >
+                    <LogIn size={15} />
+                    <span>Already registered? Sign In</span>
+                  </Link>
+                )}
 
                 {/* Categories */}
                 <div className="space-y-1">
