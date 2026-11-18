@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Award,
   BookOpen,
   Calendar,
   CheckCircle,
-  Clock,
   Sparkles,
   ArrowRight,
   Shield,
   Star,
   Users,
   ChevronDown,
-  PlayCircle,
   HelpCircle,
   Gift,
   BookMarked,
@@ -28,24 +26,6 @@ import { useExam } from '../../context/ExamContext';
 
 export default function Home() {
   const { exams } = useExam();
-
-  // Target date for main contest: Dec 6, 2026
-  const [timeLeft, setTimeLeft] = useState({ days: 17, hours: 10, minutes: 30, seconds: 0 });
-
-  useEffect(() => {
-    const target = new Date('2026-12-06T10:00:00Z').getTime();
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const diff = Math.max(0, target - now);
-      setTimeLeft({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / 1000 / 60) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      });
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   const [activeFaq, setActiveFaq] = useState(null);
 
@@ -268,37 +248,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Live Countdown Box */}
-              <div className="bg-white/90 backdrop-blur-md rounded-2xl border border-amber-300 p-4 shadow-card max-w-lg mx-auto lg:mx-0">
-                <div className="text-[11px] font-bold text-slate-600 uppercase tracking-widest mb-2 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5">
-                    <Clock size={14} className="text-amber-600" />
-                    <span>Exam Date: 06th Dec 2026</span>
-                  </div>
-                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">
-                    100% Free Entry
-                  </span>
-                </div>
-                <div className="grid grid-cols-4 gap-2 text-center">
-                  <div className="p-2 bg-amber-50 rounded-xl border border-amber-100">
-                    <div className="text-xl sm:text-2xl font-extrabold text-slate-900 font-mono">{timeLeft.days}</div>
-                    <div className="text-[9px] text-slate-500 font-semibold uppercase">Days</div>
-                  </div>
-                  <div className="p-2 bg-amber-50 rounded-xl border border-amber-100">
-                    <div className="text-xl sm:text-2xl font-extrabold text-slate-900 font-mono">{timeLeft.hours}</div>
-                    <div className="text-[9px] text-slate-500 font-semibold uppercase">Hours</div>
-                  </div>
-                  <div className="p-2 bg-amber-50 rounded-xl border border-amber-100">
-                    <div className="text-xl sm:text-2xl font-extrabold text-slate-900 font-mono">{timeLeft.minutes}</div>
-                    <div className="text-[9px] text-slate-500 font-semibold uppercase">Mins</div>
-                  </div>
-                  <div className="p-2 bg-amber-50 rounded-xl border border-amber-100">
-                    <div className="text-xl sm:text-2xl font-extrabold text-slate-900 font-mono">{timeLeft.seconds}</div>
-                    <div className="text-[9px] text-slate-500 font-semibold uppercase">Secs</div>
-                  </div>
-                </div>
-              </div>
-
               {/* CTAs */}
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
                 <Link
@@ -318,14 +267,6 @@ export default function Home() {
                   <MessageCircle size={17} />
                   <span>Join WhatsApp Channel</span>
                 </a>
-
-                <Link
-                  to="/student/lobby/gita-practice-mock"
-                  className="w-full sm:w-auto px-5 py-3.5 rounded-xl font-bold text-sm bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <PlayCircle size={17} className="text-amber-500" />
-                  <span>Practice Test</span>
-                </Link>
               </div>
             </div>
 
