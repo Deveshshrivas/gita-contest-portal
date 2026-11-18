@@ -1,0 +1,6 @@
+.mongodb_data
+.git
+.vscode
+.idea
+*.log
+server
