@@ -81,10 +81,10 @@ export const INITIAL_EXAMS = [
       }
     ],
     prizes: [
-      { rank: '1st Rank (National Champion)', prize: '₹51,000 Cash + Gold Trophy + Fully Sponsored Pilgrimage to Kurukshetra & Vrindavan' },
-      { rank: '2nd Rank (National Runner-Up)', prize: '₹31,000 Cash + Silver Trophy + Vedic Library Set' },
-      { rank: '3rd Rank (Second Runner-Up)', prize: '₹21,000 Cash + Bronze Trophy + Commendation Certificate' },
-      { rank: 'Top 100 Rankers', prize: '₹1,000 Book Voucher + Gold Embossed Bhagavad Gita As It Is' },
+      { rank: '1st Rank (State Champion)', prize: '₹1,00,001 Cash + Gold Trophy + State Gita Ratna Medal' },
+      { rank: '2nd Rank (State Runner-Up)', prize: '₹50,001 Cash + Silver Trophy + Vedic Library Set' },
+      { rank: '3rd Rank (Second Runner-Up)', prize: '₹30,001 Cash + Bronze Trophy + Commendation Certificate' },
+      { rank: 'Top 100 Rankers', prize: '₹1,100 Cash + Gold Embossed Bhagavad Gita As It Is' },
       { rank: 'All Qualified (>=60%)', prize: 'Official Certificate of Merit with Verification QR Code' }
     ],
     centers: ['Delhi NCR Central Zone (Center 01)', 'Mumbai South (Center 03)', 'Bengaluru Tech City (Center 05)', 'Kolkata East (Center 07)', 'Online At-Home Proctored']

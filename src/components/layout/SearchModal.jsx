@@ -20,8 +20,8 @@ const SEARCHABLE_ITEMS = [
   {
     category: 'Exams & Contests',
     icon: Award,
-    title: 'National Gita Leadership Contest (GLC) 2026',
-    description: '3-stage national olympiad with ₹51,000 cash prize & gold medal',
+    title: 'Gita Leadership Contest (GLC) 2026 - MP Govt & ISKCON Ujjain',
+    description: 'Online exam for Class 9th-12th with ₹1,00,001 cash prize & gold medal',
     url: '/contest/glc-2026',
     badge: 'National',
   },

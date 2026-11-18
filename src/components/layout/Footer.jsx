@@ -21,9 +21,11 @@ export default function Footer() {
             <p className="text-sm text-slate-400 leading-relaxed">
               Inspiring the youth of India with the timeless principles of the Shrimad Bhagavad Gita—cultivating ethical leadership, emotional resilience, self-discipline, and universal brotherhood.
             </p>
-            <div className="pt-2 text-xs text-slate-400 flex items-center gap-1.5">
-              <span>Organized in association with</span>
-              <strong className="text-white">ISKCON Youth Forum</strong>
+            <div className="pt-2 text-xs text-slate-400 space-y-1">
+              <div>
+                <span className="text-amber-300 font-bold block">मध्य प्रदेश शासन द्वारा आयोजित</span>
+                <span>In collaboration with <strong className="text-white">ISKCON Ujjain</strong>, <strong className="text-white">Avantkulam</strong> & <strong className="text-white">Veer Bharat Nyas</strong></span>
+              </div>
             </div>
           </div>
 
@@ -57,16 +59,16 @@ export default function Footer() {
             <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-4">Awards & Recognition</h4>
             <ul className="space-y-2.5 text-sm">
               <li className="flex items-center justify-between text-slate-300">
-                <span>🥇 1st National Rank</span>
-                <span className="font-semibold text-amber-400">₹51,000 + Gold</span>
+                <span>🥇 1st Prize</span>
+                <span className="font-semibold text-amber-400 font-mono">₹ 1,00,001/- + Gold</span>
               </li>
               <li className="flex items-center justify-between text-slate-300">
-                <span>🥈 2nd National Rank</span>
-                <span className="font-semibold text-amber-400">₹31,000 + Silver</span>
+                <span>🥈 2nd Prize</span>
+                <span className="font-semibold text-amber-400 font-mono">₹ 50,001/- + Silver</span>
               </li>
               <li className="flex items-center justify-between text-slate-300">
-                <span>🥉 3rd National Rank</span>
-                <span className="font-semibold text-amber-400">₹21,000 + Bronze</span>
+                <span>🥉 3rd Prize</span>
+                <span className="font-semibold text-amber-400 font-mono">₹ 30,001/- + Bronze</span>
               </li>
               <li className="flex items-center justify-between text-slate-300">
                 <span>🎖️ Top 100 Scholars</span>

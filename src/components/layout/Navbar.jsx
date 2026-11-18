@@ -125,7 +125,7 @@ export default function Navbar() {
                   National 2026
                 </span>
                 <span className="truncate">
-                  🕉️ <strong>National Gita Leadership Contest (GLC) 2026</strong> • Grand 3-Stage Olympiad • Over 28,000+ Enrolled
+                  🕉️ <strong>मध्य प्रदेश शासन एवं ISKCON Ujjain द्वारा आयोजित</strong> • Gita Contest 2026 • 1st Prize ₹1,00,001 • 5L+ Participants
                 </span>
               </div>
 
@@ -231,7 +231,7 @@ export default function Navbar() {
                           </span>
                         </div>
                         <p className="text-[11px] text-slate-500 mt-0.5">
-                          3-stage national contest with ₹51,000 scholarship & gold medal.
+                          Organized by MP Govt & ISKCON Ujjain with ₹1,00,001 prize & gold medal.
                         </p>
                       </div>
                     </Link>

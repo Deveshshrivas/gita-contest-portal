@@ -30,9 +30,9 @@ export const INITIAL_EXAMS = [
       "Chapter 18: Conclusion—The Perfection of Renunciation"
     ],
     prizes: [
-      { rank: "1st Prize", reward: "₹51,000 Cash + Gold Trophy & Gita Ratna Medal" },
-      { rank: "2nd Prize", reward: "₹31,000 Cash + Silver Trophy & Gita Ratna Medal" },
-      { rank: "3rd Prize", reward: "₹21,000 Cash + Bronze Trophy & Certificate of Excellence" },
+      { rank: "1st Prize", reward: "₹1,00,001 Cash + Gold Trophy & State Gita Ratna Medal" },
+      { rank: "2nd Prize", reward: "₹50,001 Cash + Silver Trophy & State Gita Medal" },
+      { rank: "3rd Prize", reward: "₹30,001 Cash + Bronze Trophy & Certificate of Excellence" },
       { rank: "Consolation (Top 100)", reward: "₹1,100 + Special Commendation Certificate + Sacred Bhagavad Gita As It Is" },
       { rank: "All Participants", reward: "Personalized Digital Certificate of Merit with Verification QR" }
     ],
