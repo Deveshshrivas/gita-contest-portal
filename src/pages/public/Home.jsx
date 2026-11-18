@@ -198,17 +198,23 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Dignitary Special Thanks Badge with CM Photo */}
-            <div className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 text-white px-3.5 py-2 rounded-2xl shadow-sm flex items-center gap-3 shrink-0">
+            {/* Dignitary Special Thanks Badge with Centered CM Portrait */}
+            <div className="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white px-4 py-2.5 rounded-2xl shadow-md border border-amber-400/40 flex items-center gap-3 shrink-0">
               <img
                 src="/images/dr-mohan-yadav-cm.png"
                 alt="Dr. Mohan Yadav, Chief Minister Madhya Pradesh"
-                className="w-11 h-11 rounded-full border-2 border-amber-200 object-cover shadow-xs shrink-0"
+                className="w-12 h-12 rounded-full border-2 border-white object-cover object-center shadow-xs shrink-0 bg-sky-100"
               />
               <div className="text-left">
-                <span className="text-[9px] uppercase tracking-wider block text-amber-100 font-semibold leading-tight">Special Thanks</span>
-                <strong className="text-xs block leading-tight text-white font-extrabold">DR. MOHAN YADAV</strong>
-                <span className="text-[10px] text-amber-100 block leading-tight">Chief Minister, Madhya Pradesh</span>
+                <span className="text-[9px] uppercase tracking-wider block text-amber-200 font-bold leading-tight">
+                  SPECIAL THANKS
+                </span>
+                <strong className="text-xs sm:text-sm block leading-tight text-white font-black tracking-wide">
+                  DR. MOHAN YADAV
+                </strong>
+                <span className="text-[10px] text-amber-100 font-medium block leading-tight">
+                  Chief Minister, Madhya Pradesh
+                </span>
               </div>
             </div>
           </div>
