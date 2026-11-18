@@ -135,13 +135,32 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-b from-amber-50/70 via-vedic-light/30 to-vedic-cream pt-6 sm:pt-10 pb-16 sm:pb-24 border-b border-amber-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Top Organizers Ribbon Banner */}
-          <div className="bg-white/95 backdrop-blur-md rounded-2xl border border-amber-300/80 p-3 sm:p-4 mb-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center flex-wrap justify-center md:justify-start gap-4 sm:gap-6 text-xs font-bold text-slate-800">
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-amber-100 border border-amber-300 flex items-center justify-center text-sm font-bold">
-                  🏛️
-                </span>
+          {/* Top Organizers Ribbon Banner with Authentic Official Logos */}
+          <div className="bg-white/95 backdrop-blur-md rounded-2xl border border-amber-300/80 p-3 sm:p-4 mb-8 shadow-sm flex flex-col xl:flex-row items-center justify-between gap-4">
+            <div className="flex items-center flex-wrap justify-center xl:justify-start gap-4 sm:gap-6 text-xs font-bold text-slate-800">
+              
+              {/* 1. Avantkulam */}
+              <div className="flex items-center gap-2.5">
+                <img
+                  src="/images/logo-avantkulam-clean.png"
+                  alt="Avantkulam Logo"
+                  className="w-10 h-10 object-contain rounded-full border border-slate-200 shadow-2xs"
+                />
+                <div>
+                  <span className="text-[10px] text-emerald-800 uppercase block tracking-wider font-extrabold">अवंतिकुलम</span>
+                  <span className="text-xs text-slate-900 font-bold">Avantkulam</span>
+                </div>
+              </div>
+
+              <div className="h-6 w-px bg-slate-200 hidden sm:block" />
+
+              {/* 2. Madhya Pradesh Shasan */}
+              <div className="flex items-center gap-2.5">
+                <img
+                  src="/images/logo-mp-shasan-clean.png"
+                  alt="Madhya Pradesh Shasan Official Seal"
+                  className="w-10 h-10 object-contain rounded-full border border-amber-300 shadow-2xs"
+                />
                 <div>
                   <span className="text-[10px] text-amber-800 uppercase block tracking-wider font-extrabold">मध्य प्रदेश शासन</span>
                   <span className="text-xs text-slate-900 font-bold">Govt. of Madhya Pradesh</span>
@@ -150,45 +169,47 @@ export default function Home() {
 
               <div className="h-6 w-px bg-slate-200 hidden sm:block" />
 
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 flex items-center justify-center text-sm font-bold">
-                  🕉️
-                </span>
+              {/* 3. ISKCON Ujjain */}
+              <div className="flex items-center gap-2.5">
+                <img
+                  src="/images/logo-iskcon-ujjain-clean.png"
+                  alt="ISKCON Ujjain Official Logo"
+                  className="w-10 h-10 object-contain"
+                />
                 <div>
-                  <span className="text-[10px] text-emerald-800 uppercase block tracking-wider font-extrabold">इस्कॉन उज्जैन</span>
+                  <span className="text-[10px] text-slate-800 uppercase block tracking-wider font-extrabold">इस्कॉन उज्जैन</span>
                   <span className="text-xs text-slate-900 font-bold">ISKCON Ujjain</span>
                 </div>
               </div>
 
               <div className="h-6 w-px bg-slate-200 hidden sm:block" />
 
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-blue-100 border border-blue-300 text-blue-800 flex items-center justify-center text-sm font-bold">
-                  🌿
-                </span>
+              {/* 4. Veer Bharat Nyas */}
+              <div className="flex items-center gap-2.5">
+                <img
+                  src="/images/logo-veer-bharat-clean.png"
+                  alt="Veer Bharat Nyas Official Logo"
+                  className="h-9 w-auto object-contain"
+                />
                 <div>
-                  <span className="text-[10px] text-blue-800 uppercase block tracking-wider font-extrabold">अवंतिकुलम</span>
-                  <span className="text-xs text-slate-900 font-bold">Avantkulam</span>
-                </div>
-              </div>
-
-              <div className="h-6 w-px bg-slate-200 hidden sm:block" />
-
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-orange-100 border border-orange-300 text-orange-800 flex items-center justify-center text-sm font-bold">
-                  ☀️
-                </span>
-                <div>
-                  <span className="text-[10px] text-orange-800 uppercase block tracking-wider font-extrabold">वीर भारत न्यास</span>
+                  <span className="text-[10px] text-rose-800 uppercase block tracking-wider font-extrabold">वीर भारत न्यास</span>
                   <span className="text-xs text-slate-900 font-bold">Veer Bharat Nyas</span>
                 </div>
               </div>
             </div>
 
-            {/* Dignitary Special Thanks Badge */}
-            <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-3.5 py-1.5 rounded-xl shadow-xs text-center md:text-right shrink-0">
-              <span className="text-[9px] uppercase tracking-wider block text-amber-100 font-semibold">Special Patronage</span>
-              <strong className="text-xs block leading-tight">Dr. Mohan Yadav, Chief Minister MP</strong>
+            {/* Dignitary Special Thanks Badge with CM Photo */}
+            <div className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 text-white px-3.5 py-2 rounded-2xl shadow-sm flex items-center gap-3 shrink-0">
+              <img
+                src="/images/dr-mohan-yadav-cm.png"
+                alt="Dr. Mohan Yadav, Chief Minister Madhya Pradesh"
+                className="w-11 h-11 rounded-full border-2 border-amber-200 object-cover shadow-xs shrink-0"
+              />
+              <div className="text-left">
+                <span className="text-[9px] uppercase tracking-wider block text-amber-100 font-semibold leading-tight">Special Thanks</span>
+                <strong className="text-xs block leading-tight text-white font-extrabold">DR. MOHAN YADAV</strong>
+                <span className="text-[10px] text-amber-100 block leading-tight">Chief Minister, Madhya Pradesh</span>
+              </div>
             </div>
           </div>
 

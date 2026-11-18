@@ -21,10 +21,16 @@ export default function Footer() {
             <p className="text-sm text-slate-400 leading-relaxed">
               Inspiring the youth of India with the timeless principles of the Shrimad Bhagavad Gita—cultivating ethical leadership, emotional resilience, self-discipline, and universal brotherhood.
             </p>
-            <div className="pt-2 text-xs text-slate-400 space-y-1">
+            <div className="pt-2 text-xs text-slate-400 space-y-2">
               <div>
                 <span className="text-amber-300 font-bold block">मध्य प्रदेश शासन द्वारा आयोजित</span>
                 <span>In collaboration with <strong className="text-white">ISKCON Ujjain</strong>, <strong className="text-white">Avantkulam</strong> & <strong className="text-white">Veer Bharat Nyas</strong></span>
+              </div>
+              <div className="pt-1 flex items-center gap-2.5">
+                <img src="/images/logo-mp-shasan-clean.png" alt="MP Shasan" className="w-8 h-8 object-contain rounded-full bg-white p-0.5 shadow-2xs" />
+                <img src="/images/logo-iskcon-ujjain-clean.png" alt="ISKCON Ujjain" className="w-8 h-8 object-contain bg-white rounded-md p-0.5 shadow-2xs" />
+                <img src="/images/logo-avantkulam-clean.png" alt="Avantkulam" className="w-8 h-8 object-contain rounded-full bg-white p-0.5 shadow-2xs" />
+                <img src="/images/logo-veer-bharat-clean.png" alt="Veer Bharat Nyas" className="h-7 w-auto object-contain bg-white rounded-md px-1 py-0.5 shadow-2xs" />
               </div>
             </div>
           </div>
