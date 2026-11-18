@@ -340,14 +340,8 @@ export default function Home() {
                   <img
                     src="/images/gita-contest-2026-official-banner.webp"
                     alt="Official Gita Contest 2026 - MP Government & ISKCON Ujjain"
-                    className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                    className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500 block"
                   />
-
-                  {/* High Quality Overlay Pill */}
-                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md rounded-xl px-3 py-1.5 shadow-md border border-amber-300 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                    <span className="text-[11px] font-extrabold text-slate-900">Official Contest Poster</span>
-                  </div>
 
                   <div className="p-4 bg-gradient-to-r from-amber-50 via-white to-amber-50 border-t border-amber-200 flex items-center justify-between">
                     <div>
