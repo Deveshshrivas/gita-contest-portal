@@ -30,7 +30,7 @@ export const MOCK_BOOKS = [
     edition: "Hardbound Gold-foiled Edition",
     price: 320,
     sponsorCost: 180,
-    coverImage: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&auto=format&fit=crop&q=80",
+    coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&auto=format&fit=crop&q=80",
     description: "मूल संस्कृत श्लोक, अन्वय, हिन्दी अनुवाद तथा स्वामी प्रभुपाद के प्रामाणिक तात्पर्यों सहित। समस्त भारत में सर्वाधिक पठित गीता संस्करण।",
     stockReceived: 35000,
     stockAllocated: 16000,

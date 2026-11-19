@@ -496,7 +496,7 @@ export default function Home() {
                         ? 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&auto=format&fit=crop&q=80'
                         : exam.id === 'gita-practice-mock'
                         ? 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80'
-                        : 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&auto=format&fit=crop&q=80'
+                        : 'https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&auto=format&fit=crop&q=80'
                     }
                     alt={exam.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -631,13 +631,14 @@ export default function Home() {
             {/* Sacred Quote Card */}
             <div className="w-full max-w-xl mx-auto lg:max-w-none">
               <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/40 shadow-2xl bg-slate-950 p-6 sm:p-8 flex flex-col items-center text-center space-y-4">
-                {/* Background Image with Ambient Dark Overlay */}
-                <img
-                  src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80"
-                  alt="Sacred Bhagavad Gita Text"
-                  className="absolute inset-0 w-full h-full object-cover object-center opacity-25 pointer-events-none"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-900/80 pointer-events-none" />
+                {/* Divine Ambient Aura & Vedic Illumination */}
+                <div className="absolute inset-0 bg-gradient-to-b from-amber-950/30 via-slate-950 to-slate-950 pointer-events-none" />
+                <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-80 h-40 bg-gradient-to-b from-amber-500/20 via-amber-600/5 to-transparent rounded-full blur-2xl pointer-events-none" />
+
+                {/* Sacred ॐ Watermark */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.035]">
+                  <span className="font-shloka text-[180px] sm:text-[220px] font-bold text-amber-200 leading-none">ॐ</span>
+                </div>
 
                 {/* Badge Centered */}
                 <div className="relative z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider">
