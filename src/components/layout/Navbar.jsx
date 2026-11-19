@@ -550,23 +550,13 @@ export default function Navbar() {
                   )}
                 </div>
               ) : (
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <Link
-                    to="/login"
-                    className="hidden md:inline-flex items-center gap-1 px-3 py-2 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition cursor-pointer"
-                  >
-                    <LogIn size={14} />
-                    <span>Sign In</span>
-                  </Link>
-
-                  <Link
-                    to="/register"
-                    className="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-extrabold bg-gradient-to-r from-vedic-primary via-vedic-teal to-vedic-accent text-white shadow-md shadow-vedic-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
-                  >
-                    <span>Register Free</span>
-                    <ArrowRight size={13} />
-                  </Link>
-                </div>
+                <Link
+                  to="/login"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition cursor-pointer"
+                >
+                  <LogIn size={14} />
+                  <span>Sign In</span>
+                </Link>
               )}
 
               {/* Mobile Hamburger Toggle */}
