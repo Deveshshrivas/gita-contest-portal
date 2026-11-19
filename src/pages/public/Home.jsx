@@ -266,13 +266,13 @@ export default function Home() {
             </div>
 
             {/* Right Visual Column: Official Poster Banner */}
-            <div className="lg:col-span-6 relative">
+            <div className="lg:col-span-6 relative mt-6 lg:mt-0">
               <div className="relative mx-auto max-w-lg lg:max-w-none">
                 {/* Spiritual Golden Halo */}
-                <div className="absolute -inset-4 bg-gradient-to-tr from-amber-500/30 via-orange-400/20 to-emerald-400/20 rounded-3xl blur-2xl -z-10" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/20 via-orange-400/20 to-emerald-400/20 rounded-3xl blur-xl -z-10" />
 
                 {/* Main Official Poster Container */}
-                <div className="relative rounded-3xl overflow-hidden border-3 border-amber-400/90 shadow-2xl bg-white group">
+                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 sm:border-3 border-amber-400/90 shadow-2xl bg-white group">
                   <img
                     src="/images/gita-contest-2026-official-banner.webp"
                     alt="Official Gita Contest 2026 - MP Government & ISKCON Ujjain"

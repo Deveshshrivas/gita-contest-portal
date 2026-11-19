@@ -169,7 +169,7 @@ export default function Navbar() {
                     2026
                   </span>
                 </div>
-                <p className="text-[9px] sm:text-[10px] text-slate-500 font-semibold tracking-wider uppercase mt-0.5">
+                <p className="text-[9px] sm:text-[10px] text-slate-500 font-semibold tracking-wider uppercase mt-0.5 hidden xs:block sm:block">
                   National Leadership Olympiad
                 </p>
               </div>
@@ -552,7 +552,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   to="/login"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition cursor-pointer"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition cursor-pointer"
                 >
                   <LogIn size={14} />
                   <span>Sign In</span>

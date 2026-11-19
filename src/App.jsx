@@ -55,9 +55,9 @@ import DonorImpact from './features/donations/DonorImpact';
 // Layout wrapper for Public & Student pages
 function PublicShell({ children }) {
   return (
-    <div className="min-h-screen flex flex-col bg-vedic-cream/30">
+    <div className="min-h-screen flex flex-col bg-vedic-cream/30 w-full max-w-full overflow-x-hidden">
       <Navbar />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">{children}</main>
       <Footer />
     </div>
   );
