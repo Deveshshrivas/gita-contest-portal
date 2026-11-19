@@ -177,18 +177,6 @@ export default function Navbar() {
 
             {/* ── Desktop Navigation Links ── */}
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
-              {/* Home */}
-              <Link
-                to="/"
-                className={`px-3 py-2 rounded-xl text-xs font-bold transition-all ${
-                  isCurrentActive('/')
-                    ? 'text-vedic-primary bg-vedic-light'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
-                }`}
-              >
-                Home
-              </Link>
-
               {/* ── 1. Exams Dropdown ── */}
               <div className="relative">
                 <button
@@ -678,13 +666,6 @@ export default function Navbar() {
                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block px-2 mb-1">
                     Explore & Learn
                   </span>
-                  <Link
-                    to="/"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-3 py-2 rounded-xl text-xs font-bold text-slate-800 hover:bg-slate-50"
-                  >
-                    Home
-                  </Link>
                   <Link
                     to="/contest/glc-2026"
                     onClick={() => setMobileMenuOpen(false)}
