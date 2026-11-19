@@ -32,7 +32,9 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.email.trim()) return;
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.school.trim()) {
+      return;
+    }
 
     setLoading(true);
     const candidate = registerCandidate(formData, targetExam.id);
@@ -190,12 +192,13 @@ export default function Register() {
 
             <div>
               <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                Phone / WhatsApp Number
+                Phone / WhatsApp Number *
               </label>
               <div className="relative">
                 <Phone size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
                 <input
                   type="tel"
+                  required
                   placeholder="+91 98765 43210"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -261,12 +264,13 @@ export default function Register() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                School / College / Organization
+                School / College / Organization *
               </label>
               <div className="relative">
                 <Building size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
                 <input
                   type="text"
+                  required
                   placeholder="e.g. Delhi Public School"
                   value={formData.school}
                   onChange={(e) => setFormData({ ...formData, school: e.target.value })}
