@@ -116,16 +116,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Top Organizers Ribbon Banner with Authentic Official Logos */}
-          <div className="bg-white/95 backdrop-blur-md rounded-2xl border border-amber-300/80 p-2.5 sm:p-4 mb-6 sm:mb-8 shadow-sm flex flex-col xl:flex-row items-center justify-between gap-3 sm:gap-4">
-            {/* 4 Organizers: 2x2 grid on mobile (<sm), 4-col row on sm, flex on xl */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 xl:flex xl:items-center gap-2 sm:gap-4 xl:gap-6 w-full xl:w-auto text-xs font-bold text-slate-800">
+          <div className="bg-white/95 backdrop-blur-md rounded-2xl border border-amber-300/80 p-2 sm:p-4 mb-6 sm:mb-8 shadow-sm flex flex-col xl:flex-row items-center justify-between gap-3 sm:gap-4">
+            {/* 4 Organizers: 1 col on <340px, 2 cols on mobile, 4-col row on sm, flex on xl */}
+            <div className="grid grid-cols-1 min-[340px]:grid-cols-2 sm:grid-cols-4 xl:flex xl:items-center gap-2 sm:gap-4 xl:gap-6 w-full xl:w-auto text-xs font-bold text-slate-800">
               
               {/* 1. Avantkulam */}
               <div className="flex items-center gap-2 sm:gap-2.5 p-2 sm:p-0 bg-slate-50/90 sm:bg-transparent rounded-xl sm:rounded-none border border-slate-200/80 sm:border-0">
                 <img
                   src="/images/logo-avantkulam-clean.png"
                   alt="Avantkulam Logo"
-                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain rounded-full border border-slate-200 shadow-2xs shrink-0"
+                  className="w-7 h-7 sm:w-10 sm:h-10 object-contain rounded-full border border-slate-200 shadow-2xs shrink-0"
                 />
                 <div className="min-w-0">
                   <span className="text-[9px] sm:text-[10px] text-emerald-800 uppercase block tracking-wider font-extrabold truncate">अवंतिकुलम</span>
@@ -138,7 +138,7 @@ export default function Home() {
                 <img
                   src="/images/logo-mp-shasan-clean.png"
                   alt="Madhya Pradesh Shasan Official Seal"
-                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain rounded-full border border-amber-300 shadow-2xs shrink-0"
+                  className="w-7 h-7 sm:w-10 sm:h-10 object-contain rounded-full border border-amber-300 shadow-2xs shrink-0"
                 />
                 <div className="min-w-0">
                   <span className="text-[9px] sm:text-[10px] text-amber-800 uppercase block tracking-wider font-extrabold truncate">मध्य प्रदेश शासन</span>
@@ -151,7 +151,7 @@ export default function Home() {
                 <img
                   src="/images/logo-iskcon-ujjain-clean.png"
                   alt="ISKCON Ujjain Official Logo"
-                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain shrink-0"
+                  className="w-7 h-7 sm:w-10 sm:h-10 object-contain shrink-0"
                 />
                 <div className="min-w-0">
                   <span className="text-[9px] sm:text-[10px] text-slate-800 uppercase block tracking-wider font-extrabold truncate">इस्कॉन उज्जैन</span>
@@ -164,7 +164,7 @@ export default function Home() {
                 <img
                   src="/images/logo-veer-bharat-clean.png"
                   alt="Veer Bharat Nyas Official Logo"
-                  className="h-7 sm:h-9 w-auto object-contain shrink-0"
+                  className="h-6 sm:h-9 w-auto object-contain shrink-0"
                 />
                 <div className="min-w-0">
                   <span className="text-[9px] sm:text-[10px] text-rose-800 uppercase block tracking-wider font-extrabold truncate">वीर भारत न्यास</span>
@@ -178,16 +178,16 @@ export default function Home() {
               <img
                 src="/images/dr-mohan-yadav-cm.png"
                 alt="Dr. Mohan Yadav, Chief Minister Madhya Pradesh"
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white object-cover object-center shadow-xs shrink-0 bg-sky-100"
+                className="w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 border-white object-cover object-center shadow-xs shrink-0 bg-sky-100"
               />
-              <div className="text-left">
+              <div className="text-left min-w-0">
                 <span className="text-[8px] sm:text-[9px] uppercase tracking-wider block text-amber-200 font-bold leading-tight">
                   SPECIAL THANKS
                 </span>
-                <strong className="text-xs sm:text-sm block leading-tight text-white font-black tracking-wide">
+                <strong className="text-xs sm:text-sm block leading-tight text-white font-black tracking-wide truncate">
                   DR. MOHAN YADAV
                 </strong>
-                <span className="text-[9px] sm:text-[10px] text-amber-100 font-medium block leading-tight">
+                <span className="text-[9px] sm:text-[10px] text-amber-100 font-medium block leading-tight truncate">
                   Chief Minister, Madhya Pradesh
                 </span>
               </div>
@@ -195,23 +195,23 @@ export default function Home() {
           </div>
 
           {/* Main Hero Split Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center">
             
             {/* Left Content Column */}
-            <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
+            <div className="lg:col-span-6 space-y-4 sm:space-y-6 text-center lg:text-left">
               {/* Official Badges */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold tracking-wide">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2">
+                <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-[11px] sm:text-xs font-bold tracking-wide">
                   <span className="w-2 h-2 rounded-full bg-amber-500 animate-ping" />
                   <span>मध्य प्रदेश शासन द्वारा आयोजित</span>
                 </span>
-                <span className="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold">
+                <span className="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 text-[11px] sm:text-xs font-bold">
                   Class 9th to 12th Only
                 </span>
               </div>
 
               {/* Headline */}
-              <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
                 Gita Leadership Contest<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-vedic-primary to-emerald-700">
                   GLC 2026 Online Exam
@@ -219,47 +219,47 @@ export default function Home() {
               </h1>
 
               {/* Subtitle */}
-              <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-xs sm:text-base text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 Participate in the grand online values & character olympiad based on the Shrimad Bhagavad Gita. Win state cash scholarships up to <strong>₹ 1,00,001/-</strong>, trophies, and official government-certified merit credentials.
               </p>
 
               {/* 4 Official Diamond Stats Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-                <div className="p-3 bg-white rounded-2xl border border-amber-200/90 text-center shadow-2xs">
-                  <strong className="text-xl sm:text-2xl font-black text-amber-700 font-mono block">8</strong>
-                  <span className="text-[10px] font-bold text-slate-500 uppercase">Years Legacy</span>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 pt-1">
+                <div className="p-2 sm:p-3 bg-white rounded-xl sm:rounded-2xl border border-amber-200/90 text-center shadow-2xs">
+                  <strong className="text-lg sm:text-2xl font-black text-amber-700 font-mono block">8</strong>
+                  <span className="text-[9px] sm:text-[10px] font-bold text-slate-500 uppercase">Years Legacy</span>
                 </div>
-                <div className="p-3 bg-white rounded-2xl border border-amber-200/90 text-center shadow-2xs">
-                  <strong className="text-xl sm:text-2xl font-black text-slate-900 font-mono block">120</strong>
-                  <span className="text-[10px] font-bold text-slate-500 uppercase">Districts</span>
+                <div className="p-2 sm:p-3 bg-white rounded-xl sm:rounded-2xl border border-amber-200/90 text-center shadow-2xs">
+                  <strong className="text-lg sm:text-2xl font-black text-slate-900 font-mono block">120</strong>
+                  <span className="text-[9px] sm:text-[10px] font-bold text-slate-500 uppercase">Districts</span>
                 </div>
-                <div className="p-3 bg-white rounded-2xl border border-amber-200/90 text-center shadow-2xs">
-                  <strong className="text-xl sm:text-2xl font-black text-slate-900 font-mono block">1,700</strong>
-                  <span className="text-[10px] font-bold text-slate-500 uppercase">Institutions</span>
+                <div className="p-2 sm:p-3 bg-white rounded-xl sm:rounded-2xl border border-amber-200/90 text-center shadow-2xs">
+                  <strong className="text-lg sm:text-2xl font-black text-slate-900 font-mono block">1,700</strong>
+                  <span className="text-[9px] sm:text-[10px] font-bold text-slate-500 uppercase">Institutions</span>
                 </div>
-                <div className="p-3 bg-white rounded-2xl border border-emerald-300 text-center shadow-2xs bg-emerald-50/50">
-                  <strong className="text-xl sm:text-2xl font-black text-emerald-800 font-mono block">5L+</strong>
-                  <span className="text-[10px] font-bold text-emerald-700 uppercase">Participants</span>
+                <div className="p-2 sm:p-3 bg-white rounded-xl sm:rounded-2xl border border-emerald-300 text-center shadow-2xs bg-emerald-50/50">
+                  <strong className="text-lg sm:text-2xl font-black text-emerald-800 font-mono block">5L+</strong>
+                  <span className="text-[9px] sm:text-[10px] font-bold text-emerald-700 uppercase">Participants</span>
                 </div>
               </div>
 
               {/* CTAs */}
-              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-3">
                 <Link
                   to="/register"
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-extrabold text-sm bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:brightness-105 text-slate-950 shadow-md shadow-amber-500/25 hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full sm:w-auto px-4 sm:px-7 py-3 sm:py-3.5 rounded-xl font-extrabold text-xs sm:text-sm bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:brightness-105 text-slate-950 shadow-md shadow-amber-500/25 hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
                 >
                   <span>Register for Online Exam (Free)</span>
-                  <ArrowRight size={16} />
+                  <ArrowRight size={15} />
                 </Link>
 
                 <a
                   href="https://whatsapp.com/channel/0029Va9xyzOfficialGitaContest"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-700 text-white shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-emerald-600 hover:bg-emerald-700 text-white shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
                 >
-                  <MessageCircle size={17} />
+                  <MessageCircle size={16} />
                   <span>Join WhatsApp Channel</span>
                 </a>
               </div>
@@ -279,14 +279,14 @@ export default function Home() {
                     className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500 block"
                   />
 
-                  <div className="p-4 bg-gradient-to-r from-amber-50 via-white to-amber-50 border-t border-amber-200 flex items-center justify-between">
+                  <div className="p-3 sm:p-4 bg-gradient-to-r from-amber-50 via-white to-amber-50 border-t border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-center sm:text-left">
                     <div>
                       <span className="text-[10px] text-amber-800 font-bold uppercase block">Venue & Date</span>
-                      <strong className="text-xs text-slate-900">Online Across All MP Districts • 06 Dec 2026</strong>
+                      <strong className="text-[11px] sm:text-xs text-slate-900 block">Online Across MP • 06 Dec 2026</strong>
                     </div>
                     <Link
                       to="/register"
-                      className="px-3.5 py-1.5 rounded-lg bg-vedic-primary hover:bg-vedic-dark text-white text-xs font-bold transition shadow-xs"
+                      className="w-full sm:w-auto text-center px-3.5 py-1.5 rounded-lg bg-vedic-primary hover:bg-vedic-dark text-white text-xs font-bold transition shadow-xs"
                     >
                       Enroll Now →
                     </Link>
@@ -294,14 +294,14 @@ export default function Home() {
                 </div>
 
                 {/* Floating Bottom Card: Real-time Live Exam Counter */}
-                <div className="mt-3.5 bg-white rounded-2xl border border-slate-200 p-3 shadow-md flex items-center justify-between">
+                <div className="mt-3.5 bg-white rounded-2xl border border-slate-200 p-3 shadow-md flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping shrink-0" />
                     <span className="text-xs font-semibold text-slate-700">
                       National Registration: <strong className="text-emerald-700">Open & 100% Free</strong>
                     </span>
                   </div>
-                  <span className="text-[11px] font-bold text-amber-700 font-mono">
+                  <span className="text-[10px] sm:text-[11px] font-bold text-amber-700 font-mono">
                     Class 9th - 12th Focus
                   </span>
                 </div>
