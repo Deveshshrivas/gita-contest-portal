@@ -4,7 +4,14 @@
  * and standard RESTful methods.
  */
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/v1';
+const isLocalhost =
+  typeof window !== 'undefined' &&
+  (window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1' ||
+    window.location.hostname === '');
+
+const BASE_URL =
+  import.meta.env.VITE_API_URL || (isLocalhost ? 'http://localhost:5000/api/v1' : null);
 
 class ApiClient {
   constructor(baseUrl) {
@@ -31,6 +38,7 @@ class ApiClient {
   }
 
   async refreshAuthToken() {
+    if (!this.baseUrl) return null;
     const refreshToken = this.getRefreshToken();
     if (!refreshToken) {
       this.clearTokens();
@@ -65,6 +73,9 @@ class ApiClient {
   }
 
   async request(endpoint, options = {}) {
+    if (!this.baseUrl) {
+      throw new Error('No live backend configured. Running in client-side demonstration mode.');
+    }
     const url = `${this.baseUrl}${endpoint}`;
     const headers = {
       'Content-Type': 'application/json',
