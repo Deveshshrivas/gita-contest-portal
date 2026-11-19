@@ -32,7 +32,14 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.school.trim()) {
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim() ||
+      !formData.school.trim() ||
+      !formData.password ||
+      formData.password.length < 6
+    ) {
       return;
     }
 
@@ -43,7 +50,7 @@ export default function Register() {
       await apiClient.register({
         name: formData.name.trim(),
         email: formData.email.trim().toLowerCase(),
-        password: formData.password || 'Student@2026',
+        password: formData.password,
         phone: formData.phone.trim(),
         role: 'student',
         category: formData.category,
@@ -217,13 +224,15 @@ export default function Register() {
               <Lock size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
                 type="password"
-                placeholder="Choose a password (min 6 characters) or leave blank for Student@2026"
+                required
+                minLength={6}
+                placeholder="Enter a secure password (min 6 characters)"
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 className="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-vedic-primary/20 focus:border-vedic-primary"
               />
             </div>
-            <p className="text-[11px] text-slate-400 mt-1">Default if left empty: Student@2026</p>
+            <p className="text-[11px] text-slate-400 mt-1">Use this password with your email to log in to your student dashboard.</p>
           </div>
 
           {/* Category & Language */}
