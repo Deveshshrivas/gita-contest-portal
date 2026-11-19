@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   BookOpen,
@@ -52,6 +53,18 @@ export default function Navbar() {
     setMobileMenuOpen(false);
     setOpenDropdown(null);
   }, [location.pathname]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
 
   // Handle scroll detection for glassmorphic navbar
   useEffect(() => {
@@ -566,10 +579,13 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+      </header>
 
-        {/* ── Mobile Slide-Out Drawer (Elevated UI/UX) ── */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50 flex">
+      {/* ── Mobile Slide-Out Drawer (Rendered via Portal to cover full viewport) ── */}
+      {mobileMenuOpen &&
+        typeof document !== 'undefined' &&
+        createPortal(
+          <div className="lg:hidden fixed inset-0 z-50 flex justify-end">
             {/* Backdrop */}
             <div
               className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200"
@@ -577,9 +593,9 @@ export default function Navbar() {
             />
 
             {/* Drawer Content */}
-            <div className="relative ml-auto w-full max-w-xs sm:max-w-sm bg-white h-full shadow-2xl flex flex-col z-10 animate-in slide-in-from-right duration-200">
+            <div className="relative w-full max-w-xs sm:max-w-sm bg-white h-full h-[100dvh] max-h-screen shadow-2xl flex flex-col z-10 animate-in slide-in-from-right duration-200">
               {/* Drawer Header */}
-              <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+              <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50 shrink-0">
                 <div className="flex items-center gap-2.5">
                   <div className="w-8 h-8 rounded-xl bg-vedic-primary text-white flex items-center justify-center font-bold text-sm">
                     ॐ
@@ -729,14 +745,14 @@ export default function Navbar() {
               </div>
 
               {/* Drawer Footer */}
-              <div className="p-4 border-t border-slate-100 bg-slate-50 text-[11px] text-slate-500 flex items-center justify-between">
+              <div className="p-4 border-t border-slate-100 bg-slate-50 text-[11px] text-slate-500 flex items-center justify-between shrink-0">
                 <span>Helpline: +91 98765 43210</span>
                 <span className="font-semibold text-vedic-primary">GLC 2026</span>
               </div>
             </div>
-          </div>
+          </div>,
+          document.body
         )}
-      </header>
 
       {/* ── Integrated Search / Command Palette ── */}
       <SearchModal isOpen={searchModalOpen} onClose={() => setSearchModalOpen(false)} />
