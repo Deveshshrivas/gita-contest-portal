@@ -629,31 +629,39 @@ export default function Home() {
             </div>
 
             {/* Sacred Quote Card */}
-            <div className="space-y-6">
-              <div className="relative rounded-3xl overflow-hidden border border-amber-300/40 shadow-2xl bg-slate-900/80">
+            <div className="w-full max-w-xl mx-auto lg:max-w-none">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/40 shadow-2xl bg-slate-950 p-6 sm:p-8 flex flex-col items-center text-center space-y-4">
+                {/* Background Image with Ambient Dark Overlay */}
                 <img
                   src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80"
                   alt="Sacred Bhagavad Gita Text"
-                  className="w-full h-56 object-cover object-center opacity-40"
+                  className="absolute inset-0 w-full h-full object-cover object-center opacity-25 pointer-events-none"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent p-7 flex flex-col justify-end space-y-3">
-                  <div className="text-xs text-amber-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                    <Sparkles size={14} /> Core Shloka Spotlight
-                  </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-900/80 pointer-events-none" />
 
-                  <p className="font-shloka text-xl sm:text-2xl text-amber-200 font-bold leading-relaxed">
-                    &ldquo;कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।<br />
-                    मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥&rdquo;
-                  </p>
+                {/* Badge Centered */}
+                <div className="relative z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider">
+                  <Sparkles size={14} className="text-amber-400" />
+                  <span>Core Shloka Spotlight</span>
+                </div>
 
-                  <p className="text-xs sm:text-sm text-slate-300 italic">
-                    &ldquo;You have a right only to perform your prescribed duty, but never to the fruits of action. Never consider yourself the cause of results, nor be attached to inaction.&rdquo; — BG 2.47
-                  </p>
+                {/* Sanskrit Shloka Centered */}
+                <p className="relative z-10 font-shloka text-xl sm:text-2xl text-amber-200 font-bold leading-relaxed max-w-lg mx-auto">
+                  &ldquo;कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।<br />
+                  मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥&rdquo;
+                </p>
 
-                  <div className="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
-                    <span>Central Leadership Doctrine</span>
-                    <span className="text-amber-400 font-semibold">Chapter 2 • Verse 47</span>
-                  </div>
+                {/* English Translation Centered */}
+                <p className="relative z-10 text-xs sm:text-sm text-slate-300 italic max-w-md mx-auto leading-relaxed">
+                  &ldquo;You have a right only to perform your prescribed duty, but never to the fruits of action. Never consider yourself the cause of results, nor be attached to inaction.&rdquo;
+                </p>
+
+                {/* Bottom Footer Info Bar */}
+                <div className="relative z-10 w-full pt-4 border-t border-slate-800 text-[11px] text-slate-400 flex flex-col min-[360px]:flex-row items-center justify-between gap-2 text-center min-[360px]:text-left">
+                  <span>Central Leadership Doctrine</span>
+                  <span className="text-amber-400 font-semibold px-2 py-0.5 rounded bg-amber-400/10 border border-amber-400/20">
+                    Chapter 2 • Verse 47
+                  </span>
                 </div>
               </div>
             </div>
